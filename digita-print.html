@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Serviços DigitaPrint — Design gráfico, impressão grande e pequeno formato, impressão UV, corte laser, decoração de viaturas, têxtil e brindes publicitários." />
+  <title>Digita Print — Serviços</title>
+  <link rel="canonical" href="https://digitaprint.pt/digita-print.html" />
+
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="assets/img/favicon-32x32.png" sizes="32x32" type="image/png" />
+  <link rel="icon" href="assets/img/favicon-16x16.png" sizes="16x16" type="image/png" />
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="DigitaPrint" />
+  <meta property="og:locale" content="pt_PT" />
+  <meta property="og:url" content="https://digitaprint.pt/digita-print.html" />
+  <meta property="og:title" content="Digita Print — Serviços" />
+  <meta property="og:description" content="Design gráfico, impressão grande e pequeno formato, impressão UV, corte laser, decoração de viaturas, têxtil e brindes publicitários." />
+  <meta property="og:image" content="https://digitaprint.pt/assets/img/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Digita Print — Serviços" />
+  <meta name="twitter:description" content="Design gráfico, impressão, corte laser, decoração de viaturas, têxtil e brindes publicitários." />
+  <meta name="twitter:image" content="https://digitaprint.pt/assets/img/og-image.jpg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="assets/css/style.css" />
+
+  <style>
+    /* Navegação lateral de serviços (âncoras) */
+    .services-nav {
+      background: var(--color-gray-light);
+      border-bottom: 1px solid var(--color-gray-border);
+      position: sticky;
+      top: var(--header-height);
+      z-index: 100;
+    }
+
+    .services-nav__inner {
+      display: flex;
+      gap: 0;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+
+    .services-nav__inner::-webkit-scrollbar { display: none; }
+
+    .services-nav__link {
+      flex-shrink: 0;
+      font-family: var(--font-heading);
+      font-size: var(--fs-xs);
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--color-gray-mid);
+      padding: 1rem 1.25rem;
+      border-bottom: 2px solid transparent;
+      transition: color var(--transition-fast), border-color var(--transition-fast);
+      white-space: nowrap;
+    }
+
+    .services-nav__link:hover {
+      color: var(--color-accent);
+      border-bottom-color: var(--color-accent);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ========================================================
+       HEADER
+  ======================================================== -->
+  <header class="header header--transparent" role="banner">
+    <div class="container">
+      <nav class="nav" aria-label="Navegação principal">
+        <a href="index.html" class="nav__logo" aria-label="DigitaPrint — Publicidade e Impressão">
+          <!-- LOGO: guarde o ficheiro do logo em assets/img/Preto.svg -->
+          <img src="assets/img/Preto.svg"
+               alt="DigitaPrint — Publicidade e Impressão"
+               class="nav__logo-img nav__logo-img--dark" />
+          <img src="assets/img/Branco.svg"
+               alt="DigitaPrint — Publicidade e Impressão"
+               class="nav__logo-img nav__logo-img--light" />
+        </a>
+        <button class="nav__hamburger"
+                aria-label="Abrir menu de navegação"
+                aria-expanded="false"
+                aria-controls="nav-menu">
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="nav__menu" id="nav-menu" role="list">
+          <li><a href="index.html"        class="nav__link">Início</a></li>
+          <li><a href="sobre.html"        class="nav__link">Sobre</a></li>
+          <li><a href="clientes.html"     class="nav__link">Clientes</a></li>
+          <li><a href="digita-print.html" class="nav__link active">Digita Print</a></li>
+          <li><a href="contactos.html"    class="nav__link">Contactos</a></li>
+          <li><a href="contactos.html"    class="nav__cta">Pedir orçamento</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ======================================================
+         HERO — Digita Print / Serviços
+    ====================================================== -->
+    <section class="page-hero" aria-labelledby="services-hero-title">
+      <div class="hero__accent" aria-hidden="true" style="opacity:0.5;"></div>
+      <div class="hero__accent-2" aria-hidden="true" style="opacity:0.3;"></div>
+      <div class="container">
+        <p class="page-hero__eyebrow">O que fazemos</p>
+        <h1 class="page-hero__title" id="services-hero-title">
+          Tudo para comunicar a sua marca.
+        </h1>
+        <p class="page-hero__subtitle">
+          Do design à produção final — soluções personalizadas em impressão,
+          publicidade e comunicação gráfica para marcas que querem ser vistas.
+        </p>
+        <div class="btn-group" style="margin-top: var(--space-lg);">
+          <a href="contactos.html" class="btn btn--primary">Pedir orçamento</a>
+          <a href="#design"        class="btn btn--outline-white">Ver serviços</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Navegação rápida entre secções -->
+    <nav class="services-nav" aria-label="Navegar entre serviços">
+      <div class="container">
+        <div class="services-nav__inner">
+          <a href="#design"          class="services-nav__link">Design</a>
+          <a href="#grande-formato"  class="services-nav__link">Grande Formato</a>
+          <a href="#impressao-uv"    class="services-nav__link">Impressão UV</a>
+          <a href="#laser"           class="services-nav__link">Laser</a>
+          <a href="#decoracao"       class="services-nav__link">Decoração</a>
+          <a href="#textil"          class="services-nav__link">Têxtil</a>
+          <a href="#brindes"         class="services-nav__link">Brindes</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ======================================================
+         1. DESIGN GRÁFICO
+    ====================================================== -->
+    <section class="service-section section" id="design" aria-labelledby="service-design-title">
+      <div class="container">
+        <div class="service-section__inner">
+
+          <div class="service-section__content reveal">
+            <span class="service-section__tag">01 — Design</span>
+            <h2 class="service-section__title" id="service-design-title">
+              Design e comunicação visual
+            </h2>
+            <p class="service-section__text">
+              A identidade visual é o rosto da sua marca. Criamos soluções de design
+              que comunicam os valores da sua empresa de forma clara, coerente e impactante —
+              do logótipo ao catálogo completo.
+            </p>
+            <ul class="service-section__list" aria-label="Exemplos de design gráfico">
+              <li>Identidade visual e logótipos</li>
+              <li>Catálogos e brochuras empresariais</li>
+              <li>Panfletos e flyers</li>
+              <li>Cartazes e comunicação de eventos</li>
+              <li>Embalagens e rótulos</li>
+              <li>Posts e conteúdos para redes sociais</li>
+              <li>Sinalética e comunicação interna</li>
+            </ul>
+            <a href="contactos.html" class="btn btn--primary">Pedir orçamento</a>
+          </div>
+
+          <div class="service-section__image reveal reveal--delay-2">
+            <!-- SUBSTITUIR: /assets/img/servico-design.jpg — imagem de design gráfico -->
+            <div class="img-placeholder img-placeholder--1"
+                 role="img"
+                 aria-label="Design gráfico DigitaPrint — substitua por imagem real"
+                 style="min-height: 360px; font-size: 0.65rem; letter-spacing: 0.12em;">
+              <!-- <img src="assets/img/servico-design.jpg" alt="Serviço de Design Gráfico"> -->
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================
+         2. GRANDE E PEQUENO FORMATO
+    ====================================================== -->
+    <section class="service-section section section--gray" id="grande-formato" aria-labelledby="service-formato-title">
+      <div class="container">
+        <div class="service-section__inner reverse">
+
+          <div class="service-section__image reveal">
+            <!-- SUBSTITUIR: /assets/img/servico-grande-formato.jpg -->
+            <div class="img-placeholder img-placeholder--2"
+                 role="img"
+                 aria-label="Impressão grande formato — substitua por imagem real"
+                 style="min-height: 360px; font-size: 0.65rem; letter-spacing: 0.12em;">
+              <!-- <img src="assets/img/servico-grande-formato.jpg" alt="Impressão Grande Formato"> -->
+            </div>
+          </div>
+
+          <div class="service-section__content reveal reveal--delay-2">
+            <span class="service-section__tag">02 — Impressão</span>
+            <h2 class="service-section__title" id="service-formato-title">
+              Impressão grande e pequeno formato
+            </h2>
+            <p class="service-section__text">
+              Desde o cartão de visita ao outdoor de grande dimensão, produzimos
+              com rigor e qualidade. Cada suporte é escolhido em função do projeto,
+              da localização e da durabilidade necessária.
+            </p>
+            <p class="service-section__text">
+              <strong>Grande formato:</strong>
+            </p>
+            <ul class="service-section__list" aria-label="Exemplos de grande formato">
+              <li>Lonas e vinils de grandes dimensões</li>
+              <li>Canvas e papel fotográfico</li>
+              <li>Outdoors e mupis</li>
+              <li>Banners e roll-ups</li>
+              <li>Sinalética exterior e interior</li>
+            </ul>
+            <p class="service-section__text">
+              <strong>Pequeno formato:</strong>
+            </p>
+            <ul class="service-section__list" aria-label="Exemplos de pequeno formato">
+              <li>Cartões de visita</li>
+              <li>Flyers e panfletos</li>
+              <li>Menus e cardápios</li>
+              <li>Cartazes e convites</li>
+              <li>Impressão fotográfica</li>
+            </ul>
+            <a href="contactos.html" class="btn btn--primary">Pedir orçamento</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================
+         3. IMPRESSÃO UV
+    ====================================================== -->
+    <section class="service-section section" id="impressao-uv" aria-labelledby="service-uv-title">
+      <div class="container">
+        <div class="service-section__inner">
+
+          <div class="service-section__content reveal">
+            <span class="service-section__tag">03 — Impressão UV</span>
+            <h2 class="service-section__title" id="service-uv-title">
+              Impressão UV de alta qualidade
+            </h2>
+            <p class="service-section__text">
+              A impressão UV permite imprimir diretamente sobre uma vasta gama
+              de substratos rígidos e semi-flexíveis, com resultado final de alta
+              resolução, cores vibrantes e acabamento profissional e duradouro.
+            </p>
+            <p class="service-section__text">
+              Ideal para brindes exclusivos, sinalética premium, suportes de exposição
+              e peças de comunicação com alto impacto visual.
+            </p>
+            <ul class="service-section__list" aria-label="Substratos para impressão UV">
+              <li>Acrílico e PVC espumado</li>
+              <li>Madeira e contraplacado</li>
+              <li>Vidro e cerâmica</li>
+              <li>Metal e alumínio</li>
+              <li>Têxtil e materiais semi-flexíveis</li>
+              <li>Pedra e outros substratos especiais</li>
+            </ul>
+            <a href="contactos.html" class="btn btn--primary">Pedir orçamento</a>
+          </div>
+
+          <div class="service-section__image reveal reveal--delay-2">
+            <!-- SUBSTITUIR: /assets/img/servico-uv.jpg -->
+            <div class="img-placeholder img-placeholder--5"
+                 role="img"
+                 aria-label="Impressão UV — substitua por imagem real"
+                 style="min-height: 360px; font-size: 0.65rem; letter-spacing: 0.12em;">
+              <!-- <img src="assets/img/servico-uv.jpg" alt="Impressão UV DigitaPrint"> -->
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================
+         4. CORTE E GRAVAÇÃO A LASER
+    ====================================================== -->
+    <section class="service-section section section--gray" id="laser" aria-labelledby="service-laser-title">
+      <div class="container">
+        <div class="service-section__inner reverse">
+
+          <div class="service-section__image reveal">
+            <!-- SUBSTITUIR: /assets/img/servico-laser.jpg -->
+            <div class="img-placeholder img-placeholder--3"
+                 role="img"
+                 aria-label="Corte e gravação laser — substitua por imagem real"
+                 style="min-height: 360px; font-size: 0.65rem; letter-spacing: 0.12em;">
+              <!-- <img src="assets/img/servico-laser.jpg" alt="Corte e Gravação a Laser"> -->
+            </div>
+          </div>
+
+          <div class="service-section__content reveal reveal--delay-2">
+            <span class="service-section__tag">04 — Laser</span>
+            <h2 class="service-section__title" id="service-laser-title">
+              Corte e gravação a laser
+            </h2>
+            <p class="service-section__text">
+              Com precisão milimétrica, a tecnologia laser permite cortar e gravar
+              em praticamente qualquer material, criando peças únicas com detalhe
+              e acabamento premium.
+            </p>
+            <p class="service-section__text">
+              Utilizado em brindes exclusivos, sinalética, decoração e peças
+              de comunicação personalizadas.
+            </p>
+            <ul class="service-section__list" aria-label="Materiais para corte laser">
+              <li>Madeira e MDF</li>
+              <li>Acrílico e policarbonato</li>
+              <li>Vidro e espelho</li>
+              <li>Papel e cartão</li>
+              <li>Cortiça e bambu</li>
+              <li>Tecido e couro</li>
+              <li>Borracha e outros materiais</li>
+            </ul>
+            <a href="contactos.html" class="btn btn--primary">Pedir orçamento</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================
+         5. DECORAÇÃO DE VIATURAS, MONTRAS E ESPAÇOS
+    ====================================================== -->
+    <section class="service-section section" id="decoracao" aria-labelledby="service-decoracao-title">
+      <div class="container">
+        <div class="service-section__inner">
+
+          <div class="service-section__content reveal">
+            <span class="service-section__tag">05 — Decoração</span>
+            <h2 class="service-section__title" id="service-decoracao-title">
+              Decoração de viaturas, montras e espaços
+            </h2>
+            <p class="service-section__text">
+              A sua marca pode ir mais longe — literalmente. Decoramos viaturas,
+              montras, escritórios e espaços comerciais com identidade visual
+              aplicada em vinil de alta qualidade, com durabilidade e impacto garantidos.
+            </p>
+            <ul class="service-section__list" aria-label="Exemplos de decoração">
+              <li>Decoração total e parcial de viaturas</li>
+              <li>Montras e vitrines comerciais</li>
+              <li>Decoração de escritórios e espaços de trabalho</li>
+              <li>Reclames luminosos e sinalética</li>
+              <li>Roll-ups e expositores para feiras</li>
+              <li>Bandeiras e estacas publicitárias</li>
+              <li>Decoração de chão e pavimento</li>
+            </ul>
+            <a href="contactos.html" class="btn btn--primary">Pedir orçamento</a>
+          </div>
+
+          <div class="service-section__image reveal reveal--delay-2">
+            <!-- SUBSTITUIR: /assets/img/servico-decoracao.jpg -->
+            <div class="img-placeholder img-placeholder--6"
+                 role="img"
+                 aria-label="Decoração de viaturas — substitua por imagem real"
+                 style="min-height: 360px; font-size: 0.65rem; letter-spacing: 0.12em;">
+              <!-- <img src="assets/img/servico-decoracao.jpg" alt="Decoração de Viaturas e Montras"> -->
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================
+         6. TÊXTIL PERSONALIZADO
+    ====================================================== -->
+    <section class="service-section section section--gray" id="textil" aria-labelledby="service-textil-title">
+      <div class="container">
+        <div class="service-section__inner reverse">
+
+          <div class="service-section__image reveal">
+            <!-- SUBSTITUIR: /assets/img/servico-textil.jpg -->
+            <div class="img-placeholder img-placeholder--4"
+                 role="img"
+                 aria-label="Têxtil personalizado — substitua por imagem real"
+                 style="min-height: 360px; font-size: 0.65rem; letter-spacing: 0.12em;">
+              <!-- <img src="assets/img/servico-textil.jpg" alt="Têxtil Personalizado"> -->
+            </div>
+          </div>
+
+          <div class="service-section__content reveal reveal--delay-2">
+            <span class="service-section__tag">06 — Têxtil</span>
+            <h2 class="service-section__title" id="service-textil-title">
+              Têxtil personalizado
+            </h2>
+            <p class="service-section__text">
+              Personalizamos roupa e equipamentos têxteis com a identidade visual
+              da sua empresa, equipa ou evento. Produção com qualidade de detalhe,
+              quer seja para uso laboral, desportivo ou promocional.
+            </p>
+            <ul class="service-section__list" aria-label="Exemplos de têxtil">
+              <li>Roupa de trabalho e uniforme laboral</li>
+              <li>Camisolas, t-shirts e polos personalizados</li>
+              <li>Equipamentos desportivos e de equipa</li>
+              <li>Coletes, jaquetas e vestuário técnico</li>
+              <li>Bonés, chapéus e acessórios têxteis</li>
+              <li>Bordado, serigrafia e transfer digital</li>
+            </ul>
+            <a href="contactos.html" class="btn btn--primary">Pedir orçamento</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================
+         7. BRINDES PUBLICITÁRIOS
+    ====================================================== -->
+    <section class="service-section section" id="brindes" aria-labelledby="service-brindes-title">
+      <div class="container">
+        <div class="service-section__inner">
+
+          <div class="service-section__content reveal">
+            <span class="service-section__tag">07 — Brindes</span>
+            <h2 class="service-section__title" id="service-brindes-title">
+              Brindes publicitários
+            </h2>
+            <p class="service-section__text">
+              Ofertas que ficam na memória. Produzimos brindes personalizados que
+              comunicam a sua marca em cada utilização — para campanhas, eventos
+              corporativos, feiras ou como reconhecimento de parceiros.
+            </p>
+            <p class="service-section__text">
+              Personalizamos canetas, cadernos, sacos, garrafas, porta-chaves,
+              artigos de escritório, artigos de tecnologia e muito mais.
+            </p>
+            <ul class="service-section__list" aria-label="Exemplos de brindes">
+              <li>Canetas e artigos de escritório</li>
+              <li>Cadernos e blocos personalizados</li>
+              <li>Garrafas, canecas e artigos de cozinha</li>
+              <li>Porta-chaves e artigos de couro</li>
+              <li>Sacos e mochilas personalizadas</li>
+              <li>Artigos de tecnologia (power banks, USB, etc.)</li>
+              <li>Kits e conjuntos de brindes para eventos</li>
+            </ul>
+            <a href="contactos.html" class="btn btn--primary">Pedir orçamento</a>
+          </div>
+
+          <div class="service-section__image reveal reveal--delay-2">
+            <!-- SUBSTITUIR: /assets/img/servico-brindes.jpg -->
+            <div class="img-placeholder img-placeholder--2"
+                 role="img"
+                 aria-label="Brindes publicitários — substitua por imagem real"
+                 style="min-height: 360px; font-size: 0.65rem; letter-spacing: 0.12em;">
+              <!-- <img src="assets/img/servico-brindes.jpg" alt="Brindes Publicitários DigitaPrint"> -->
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================
+         CTA FINAL — Tem uma ideia?
+    ====================================================== -->
+    <section class="highlight-section" aria-labelledby="services-cta-title">
+      <div class="container">
+        <div class="highlight-section__inner reveal">
+          <p class="eyebrow">Vamos começar</p>
+          <h2 class="highlight-section__title" id="services-cta-title">
+            Tem uma ideia?<br>Nós damos forma.
+          </h2>
+          <p class="highlight-section__text">
+            Envie-nos o seu projeto, explique-nos o objetivo e ajudamos a escolher
+            a melhor solução de produção. Do conceito ao resultado final,
+            estamos consigo em cada etapa.
+          </p>
+          <div class="btn-group" style="justify-content:center;">
+            <a href="contactos.html" class="btn btn--primary">Contactar DigitaPrint</a>
+            <a href="clientes.html"  class="btn btn--outline-white">Ver trabalhos</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================================
+       FOOTER
+  ======================================================== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="index.html" class="footer__logo" aria-label="DigitaPrint — Início">
+            <img src="assets/img/Branco.svg"
+                 alt="DigitaPrint — Publicidade e Impressão"
+                 class="footer__logo-img" />
+          </a>
+          <p class="footer__desc">Design, impressão e produção publicitária para marcas que querem ser vistas.</p>
+        </div>
+        <nav aria-label="Links rápidos do rodapé">
+          <p class="footer__heading">Navegação</p>
+          <ul class="footer__links" role="list">
+            <li><a href="index.html"        class="footer__link">Início</a></li>
+            <li><a href="sobre.html"        class="footer__link">Sobre</a></li>
+            <li><a href="clientes.html"     class="footer__link">Clientes</a></li>
+            <li><a href="digita-print.html" class="footer__link">Digita Print</a></li>
+            <li><a href="contactos.html"    class="footer__link">Contactos</a></li>
+          </ul>
+        </nav>
+        <nav aria-label="Serviços no rodapé">
+          <p class="footer__heading">Serviços</p>
+          <ul class="footer__links" role="list">
+            <li><a href="#design"          class="footer__link">Design Gráfico</a></li>
+            <li><a href="#grande-formato"  class="footer__link">Grande Formato</a></li>
+            <li><a href="#impressao-uv"    class="footer__link">Impressão UV</a></li>
+            <li><a href="#laser"           class="footer__link">Corte Laser</a></li>
+            <li><a href="#textil"          class="footer__link">Têxtil</a></li>
+            <li><a href="#brindes"         class="footer__link">Brindes</a></li>
+          </ul>
+        </nav>
+        <address>
+          <p class="footer__heading">Contacto</p>
+          <a href="tel:258022562" class="footer__contact-line">
+            <span class="footer__contact-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.902.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.908.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </span>
+            258 022 562
+          </a>
+          <a href="tel:934644974" class="footer__contact-line">
+            <span class="footer__contact-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+            </span>
+            934 644 974
+          </a>
+          <a href="mailto:info@digitaprint.pt" class="footer__contact-line">
+            <span class="footer__contact-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </span>
+            info@digitaprint.pt
+          </a>
+        </address>
+      </div>
+      <div class="footer__bottom">
+        <div class="footer__socials">
+          <a href="https://www.facebook.com/people/Digitaprint-Ponte-de-Lima/100057131333283/" class="footer__social" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/digitaprint.pt/" class="footer__social" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+        </div>
+        <div class="footer__bottom-row">
+          <p class="footer__copyright">&copy; <span class="js-year">2026</span> DigitaPrint. Todos os direitos reservados.</p>
+          <div class="footer__bottom-links">
+            <a href="privacidade.html" class="footer__bottom-link">Política de Privacidade</a>
+            <a href="termos.html" class="footer__bottom-link">Termos de Utilização</a>
+            <button type="button" class="footer__bottom-link" data-cookie-preferences>Preferências de Cookies</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================
+       BOTÃO FLUTUANTE — WHATSAPP
+  ======================================================== -->
+  <a href="https://wa.me/351934644974?text=Ol%C3%A1%2C%20gostaria%20de%20pedir%20um%20or%C3%A7amento."
+     class="whatsapp-float"
+     target="_blank"
+     rel="noopener noreferrer"
+     aria-label="Falar connosco no WhatsApp">
+    <svg viewBox="0 0 448 512" fill="currentColor" aria-hidden="true"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3s19.9 53.7 22.6 57.4c2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
+  </a>
+  <script src="assets/js/cookie-consent.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E5007D"/>
+      <stop offset="100%" stop-color="#7B00D4"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#g1)"/>
+  <text x="400" y="290" font-family="Arial, sans-serif" font-size="16" fill="rgba(255,255,255,0.7)"
+        text-anchor="middle" font-weight="bold" letter-spacing="4">SUBSTITUIR POR IMAGEM REAL</text>
+  <text x="400" y="320" font-family="Arial, sans-serif" font-size="13" fill="rgba(255,255,255,0.5)"
+        text-anchor="middle">800 × 600 px</text>
+</svg>

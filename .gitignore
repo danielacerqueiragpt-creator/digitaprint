@@ -1,0 +1,7 @@
+# Ferramentas locais (não fazem parte do projeto)
+.sfdx/
+.claude/
+
+# Sistema
+.DS_Store
+Thumbs.db

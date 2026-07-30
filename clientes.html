@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Projetos e trabalhos realizados pela DigitaPrint — Design, impressão grande formato, decoração de viaturas, brindes publicitários e muito mais." />
+  <title>Clientes &amp; Projetos — DigitaPrint</title>
+  <link rel="canonical" href="https://digitaprint.pt/clientes.html" />
+
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="assets/img/favicon-32x32.png" sizes="32x32" type="image/png" />
+  <link rel="icon" href="assets/img/favicon-16x16.png" sizes="16x16" type="image/png" />
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="DigitaPrint" />
+  <meta property="og:locale" content="pt_PT" />
+  <meta property="og:url" content="https://digitaprint.pt/clientes.html" />
+  <meta property="og:title" content="Clientes &amp; Projetos — DigitaPrint" />
+  <meta property="og:description" content="Projetos e trabalhos realizados pela DigitaPrint — design, impressão grande formato, decoração de viaturas, brindes publicitários e muito mais." />
+  <meta property="og:image" content="https://digitaprint.pt/assets/img/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Clientes &amp; Projetos — DigitaPrint" />
+  <meta name="twitter:description" content="Projetos e trabalhos realizados pela DigitaPrint." />
+  <meta name="twitter:image" content="https://digitaprint.pt/assets/img/og-image.jpg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="assets/css/style.css" />
+
+  <style>
+    /* Estilos específicos desta página */
+
+    /* Grid responsivo: 4 colunas (desktop) → 2 colunas (tablet) → 1 coluna (mobile) */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      align-items: stretch;
+      gap: var(--space-lg);
+    }
+
+    @media (max-width: 1200px) {
+      .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-md);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-md);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .projects-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-sm);
+      }
+    }
+
+    /* Cartão: coluna flex para poder fixar o botão na base,
+       height:100% para preencher a altura da linha da grelha (todas iguais) */
+    .project-card {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      background: var(--color-white);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+    }
+
+    .project-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    /* Imagem de topo: proporção fixa e consistente em todos os cartões */
+    .project-card__image {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      flex-shrink: 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .project-card__image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .project-card__image .img-placeholder {
+      min-height: unset;
+      height: 100%;
+      font-size: 0.65rem;
+      letter-spacing: 0.12em;
+    }
+
+    /* Corpo do cartão: coluna flex; o botão fica sempre na base via margin-top:auto */
+    .project-card__body {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      flex: 1 1 auto;
+      padding: var(--space-md);
+    }
+
+    .project-card__category {
+      display: inline-block;
+      font-size: var(--fs-xs);
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--color-accent);
+      margin-bottom: var(--space-xs);
+    }
+
+    .project-card__title {
+      font-size: var(--fs-md);
+      font-weight: 700;
+      color: var(--color-dark);
+      margin-bottom: var(--space-xs);
+    }
+
+    .project-card__desc {
+      font-size: var(--fs-sm);
+      color: var(--color-gray-mid);
+      margin-bottom: var(--space-md);
+      max-width: 100%;
+    }
+
+    .project-card__body .btn {
+      margin-top: auto;
+    }
+
+    /* Badge de categoria no canto da imagem */
+    .project-card__badge {
+      position: absolute;
+      top: var(--space-sm);
+      left: var(--space-sm);
+      background: var(--color-accent);
+      color: var(--color-white);
+      font-size: var(--fs-xs);
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.25rem 0.75rem;
+      border-radius: 100px;
+      font-family: var(--font-heading);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ========================================================
+       HEADER
+  ======================================================== -->
+  <header class="header header--transparent" role="banner">
+    <div class="container">
+      <nav class="nav" aria-label="Navegação principal">
+        <a href="index.html" class="nav__logo" aria-label="DigitaPrint — Publicidade e Impressão">
+          <!-- LOGO: guarde o ficheiro do logo em assets/img/Preto.svg -->
+          <img src="assets/img/Preto.svg"
+               alt="DigitaPrint — Publicidade e Impressão"
+               class="nav__logo-img nav__logo-img--dark" />
+          <img src="assets/img/Branco.svg"
+               alt="DigitaPrint — Publicidade e Impressão"
+               class="nav__logo-img nav__logo-img--light" />
+        </a>
+        <button class="nav__hamburger"
+                aria-label="Abrir menu de navegação"
+                aria-expanded="false"
+                aria-controls="nav-menu">
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="nav__menu" id="nav-menu" role="list">
+          <li><a href="index.html"        class="nav__link">Início</a></li>
+          <li><a href="sobre.html"        class="nav__link">Sobre</a></li>
+          <li><a href="clientes.html"     class="nav__link active">Clientes</a></li>
+          <li><a href="digita-print.html" class="nav__link">Digita Print</a></li>
+          <li><a href="contactos.html"    class="nav__link">Contactos</a></li>
+          <li><a href="contactos.html"    class="nav__cta">Pedir orçamento</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ======================================================
+         HERO — Clientes
+    ====================================================== -->
+    <section class="page-hero" aria-labelledby="clients-hero-title">
+      <div class="hero__accent" aria-hidden="true" style="opacity:0.4;"></div>
+      <div class="container">
+        <p class="page-hero__eyebrow">Trabalhos realizados</p>
+        <h1 class="page-hero__title" id="clients-hero-title">
+          Alguns trabalhos realizados
+        </h1>
+        <p class="page-hero__subtitle">
+          Projetos de design, impressão, decoração e produção publicitária
+          desenvolvidos para marcas e empresas de diferentes setores.
+        </p>
+      </div>
+    </section>
+
+    <!-- ======================================================
+         GALERIA DE PROJETOS COM FILTROS
+    ====================================================== -->
+    <section class="section" aria-labelledby="projects-title">
+      <div class="container">
+
+        <!-- Filtros -->
+        <div class="filter-bar reveal" role="group" aria-label="Filtrar projetos por categoria">
+          <button class="filter-btn is-active" data-filter="all">Todos</button>
+          <button class="filter-btn" data-filter="design">Design</button>
+          <button class="filter-btn" data-filter="grande-formato">Grande Formato</button>
+          <button class="filter-btn" data-filter="viaturas">Viaturas</button>
+          <button class="filter-btn" data-filter="brindes">Brindes</button>
+          <button class="filter-btn" data-filter="laser">Laser</button>
+        </div>
+
+        <!-- Grelha de projetos -->
+        <div class="projects-grid" id="projects-grid" aria-live="polite" aria-label="Galeria de projetos">
+
+          <!-- Projeto 1: Villa Lux Imobiliária -->
+          <article class="project-card reveal" data-category="viaturas">
+            <div class="project-card__image">
+              <!-- Preview temporário: foto real de digitaprint.pt (hotlink), substituir por assets/img/proj-villa-lux.jpg -->
+              <img src="https://digitaprint.pt/wp-content/uploads/2019/08/Villa-Lux-Decora%C3%A7%C3%A3o-de-Viatura.jpg"
+                   alt="Decoração de Viatura — Villa Lux Imobiliária"
+                   loading="lazy" />
+              <span class="project-card__badge" aria-hidden="true">Viaturas</span>
+            </div>
+            <div class="project-card__body">
+              <span class="project-card__category">Decoração de Viaturas</span>
+              <h2 class="project-card__title">Villa Lux Imobiliária</h2>
+              <p class="project-card__desc">
+                Decoração completa de viatura com identidade visual da marca,
+                em vinil recortado e impresso de alta qualidade.
+              </p>
+              <button type="button" class="btn btn--outline btn--sm js-lightbox-trigger">Ver projeto</button>
+            </div>
+          </article>
+
+          <!-- Projeto 2: Casa Quintela -->
+          <article class="project-card reveal reveal--delay-1" data-category="viaturas">
+            <div class="project-card__image">
+              <!-- Preview temporário: foto real de digitaprint.pt (hotlink), substituir por assets/img/proj-casa-quintela.jpg -->
+              <img src="https://digitaprint.pt/wp-content/uploads/2019/05/Casa-Quintela-740x555.jpg"
+                   alt="Decoração de Viatura — Casa Quintela"
+                   loading="lazy" />
+              <span class="project-card__badge" aria-hidden="true">Viaturas</span>
+            </div>
+            <div class="project-card__body">
+              <span class="project-card__category">Decoração de Viaturas</span>
+              <h2 class="project-card__title">Casa Quintela</h2>
+              <p class="project-card__desc">
+                Identidade visual aplicada em viatura de trabalho, com impressão
+                total em vinil de alta durabilidade.
+              </p>
+              <button type="button" class="btn btn--outline btn--sm js-lightbox-trigger">Ver projeto</button>
+            </div>
+          </article>
+
+          <!-- Projeto 3: Seaside Braga -->
+          <article class="project-card reveal reveal--delay-2" data-category="grande-formato">
+            <div class="project-card__image">
+              <!-- SUBSTITUIR: /assets/img/proj-seaside.jpg — decoração de montra -->
+              <div class="img-placeholder img-placeholder--2"
+                   role="img"
+                   aria-label="Decoração de Montras — Seaside Braga">
+              </div>
+              <span class="project-card__badge" aria-hidden="true">Grande Formato</span>
+            </div>
+            <div class="project-card__body">
+              <span class="project-card__category">Decoração de Montras</span>
+              <h2 class="project-card__title">Seaside Braga</h2>
+              <p class="project-card__desc">
+                Decoração de montra comercial em vinil impresso, com design personalizado
+                para o espaço e comunicação da marca.
+              </p>
+              <button type="button" class="btn btn--outline btn--sm js-lightbox-trigger">Ver projeto</button>
+            </div>
+          </article>
+
+          <!-- Projeto 4: Passion Piscines -->
+          <article class="project-card reveal" data-category="brindes">
+            <div class="project-card__image">
+              <!-- SUBSTITUIR: /assets/img/proj-passion-piscines.jpg -->
+              <div class="img-placeholder img-placeholder--5"
+                   role="img"
+                   aria-label="Brindes Publicitários — Passion Piscines">
+              </div>
+              <span class="project-card__badge" aria-hidden="true">Brindes</span>
+            </div>
+            <div class="project-card__body">
+              <span class="project-card__category">Brindes Publicitários / Impressão UV</span>
+              <h2 class="project-card__title">Passion Piscines</h2>
+              <p class="project-card__desc">
+                Desenvolvimento e produção de brindes personalizados com impressão UV
+                para campanha de marketing e comunicação de marca.
+              </p>
+              <button type="button" class="btn btn--outline btn--sm js-lightbox-trigger">Ver projeto</button>
+            </div>
+          </article>
+
+          <!-- Projeto 5: Future Fuels -->
+          <article class="project-card reveal reveal--delay-1" data-category="brindes">
+            <div class="project-card__image">
+              <!-- Preview temporário: foto real de digitaprint.pt (hotlink), substituir por assets/img/proj-future-fuels.jpg -->
+              <img src="https://digitaprint.pt/wp-content/uploads/2019/05/Future-Fuels-740x555.jpg"
+                   alt="Brindes e Grande Formato — Future Fuels"
+                   loading="lazy" />
+              <span class="project-card__badge" aria-hidden="true">Brindes</span>
+            </div>
+            <div class="project-card__body">
+              <span class="project-card__category">Brindes Publicitários / Grande Formato</span>
+              <h2 class="project-card__title">Future Fuels</h2>
+              <p class="project-card__desc">
+                Impressão de materiais grandes formato e produção de brindes
+                publicitários para campanha corporativa de marca.
+              </p>
+              <button type="button" class="btn btn--outline btn--sm js-lightbox-trigger">Ver projeto</button>
+            </div>
+          </article>
+
+          <!-- Projeto 6: Campus da Evangelização -->
+          <article class="project-card reveal reveal--delay-2" data-category="design">
+            <div class="project-card__image">
+              <!-- Preview temporário: foto real de digitaprint.pt (hotlink), substituir por assets/img/proj-campus-evangelizacao.jpg -->
+              <img src="https://digitaprint.pt/wp-content/uploads/2019/05/Campus-da-Evangeliza%C3%A7%C3%A3o-2019-900x600.jpg"
+                   alt="Design e Grande Formato — Campus da Evangelização"
+                   loading="lazy" />
+              <span class="project-card__badge" aria-hidden="true">Design</span>
+            </div>
+            <div class="project-card__body">
+              <span class="project-card__category">Design / Grande Formato</span>
+              <h2 class="project-card__title">Campus da Evangelização</h2>
+              <p class="project-card__desc">
+                Criação de identidade visual para evento, impressão de banners,
+                lonas e materiais de comunicação em grande formato.
+              </p>
+              <button type="button" class="btn btn--outline btn--sm js-lightbox-trigger">Ver projeto</button>
+            </div>
+          </article>
+
+          <!-- Projeto 7: II Trail Trilhos Ocultos -->
+          <article class="project-card reveal" data-category="design">
+            <div class="project-card__image">
+              <!-- SUBSTITUIR: /assets/img/proj-trail-trilhos.jpg -->
+              <div class="img-placeholder img-placeholder--1"
+                   role="img"
+                   aria-label="Design e Grande Formato — II Trail Trilhos Ocultos"
+                   style="background: linear-gradient(135deg, #00B4D8 0%, #023E8A 100%);">
+              </div>
+              <span class="project-card__badge" aria-hidden="true">Design</span>
+            </div>
+            <div class="project-card__body">
+              <span class="project-card__category">Design / Grande Formato</span>
+              <h2 class="project-card__title">II Trail Trilhos Ocultos</h2>
+              <p class="project-card__desc">
+                Design completo de cartaz, dorsais, bandeiras, sinalética e
+                materiais de comunicação para evento desportivo.
+              </p>
+              <button type="button" class="btn btn--outline btn--sm js-lightbox-trigger">Ver projeto</button>
+            </div>
+          </article>
+
+        </div><!-- /projects-grid -->
+
+        <!-- Mensagem quando não há resultados -->
+        <div id="no-results" style="display:none;" class="empty-state" role="alert">
+          <p>Nenhum projeto encontrado para esta categoria.</p>
+        </div>
+
+        <!-- CTA -->
+        <div class="text-center mt-xl reveal">
+          <p style="margin: 0 auto var(--space-md); max-width: 50ch;">
+            Quer ver o seu projeto aqui? Fale connosco e encontramos
+            a solução certa para a sua marca.
+          </p>
+          <a href="contactos.html" class="btn btn--primary">Pedir orçamento</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================
+         SECÇÃO CTA
+    ====================================================== -->
+    <section class="highlight-section" aria-labelledby="cta-clients-title">
+      <div class="container">
+        <div class="highlight-section__inner reveal">
+          <p class="eyebrow">O próximo somos nós e a sua marca</p>
+          <h2 class="highlight-section__title" id="cta-clients-title">
+            Pronto para comunicar melhor?
+          </h2>
+          <p class="highlight-section__text">
+            Conte-nos o seu projeto. Analisamos as necessidades e apresentamos
+            a solução mais adequada em design, impressão e produção.
+          </p>
+          <div class="btn-group" style="justify-content:center;">
+            <a href="contactos.html" class="btn btn--primary">Fale connosco</a>
+            <a href="digita-print.html" class="btn btn--outline-white">Ver serviços</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================================
+       FOOTER
+  ======================================================== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="index.html" class="footer__logo" aria-label="DigitaPrint — Início">
+            <img src="assets/img/Branco.svg"
+                 alt="DigitaPrint — Publicidade e Impressão"
+                 class="footer__logo-img" />
+          </a>
+          <p class="footer__desc">Design, impressão e produção publicitária para marcas que querem ser vistas.</p>
+        </div>
+        <nav aria-label="Links rápidos do rodapé">
+          <p class="footer__heading">Navegação</p>
+          <ul class="footer__links" role="list">
+            <li><a href="index.html"        class="footer__link">Início</a></li>
+            <li><a href="sobre.html"        class="footer__link">Sobre</a></li>
+            <li><a href="clientes.html"     class="footer__link">Clientes</a></li>
+            <li><a href="digita-print.html" class="footer__link">Digita Print</a></li>
+            <li><a href="contactos.html"    class="footer__link">Contactos</a></li>
+          </ul>
+        </nav>
+        <nav aria-label="Serviços no rodapé">
+          <p class="footer__heading">Serviços</p>
+          <ul class="footer__links" role="list">
+            <li><a href="digita-print.html#design"         class="footer__link">Design Gráfico</a></li>
+            <li><a href="digita-print.html#grande-formato" class="footer__link">Grande Formato</a></li>
+            <li><a href="digita-print.html#impressao-uv"   class="footer__link">Impressão UV</a></li>
+            <li><a href="digita-print.html#laser"          class="footer__link">Corte Laser</a></li>
+            <li><a href="digita-print.html#textil"         class="footer__link">Têxtil</a></li>
+            <li><a href="digita-print.html#brindes"        class="footer__link">Brindes</a></li>
+          </ul>
+        </nav>
+        <address>
+          <p class="footer__heading">Contacto</p>
+          <a href="tel:258022562" class="footer__contact-line">
+            <span class="footer__contact-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.902.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.908.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </span>
+            258 022 562
+          </a>
+          <a href="tel:934644974" class="footer__contact-line">
+            <span class="footer__contact-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+            </span>
+            934 644 974
+          </a>
+          <a href="mailto:info@digitaprint.pt" class="footer__contact-line">
+            <span class="footer__contact-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </span>
+            info@digitaprint.pt
+          </a>
+        </address>
+      </div>
+      <div class="footer__bottom">
+        <div class="footer__socials">
+          <a href="https://www.facebook.com/people/Digitaprint-Ponte-de-Lima/100057131333283/" class="footer__social" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/digitaprint.pt/" class="footer__social" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+        </div>
+        <div class="footer__bottom-row">
+          <p class="footer__copyright">&copy; <span class="js-year">2026</span> DigitaPrint. Todos os direitos reservados.</p>
+          <div class="footer__bottom-links">
+            <a href="privacidade.html" class="footer__bottom-link">Política de Privacidade</a>
+            <a href="termos.html" class="footer__bottom-link">Termos de Utilização</a>
+            <button type="button" class="footer__bottom-link" data-cookie-preferences>Preferências de Cookies</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================
+       LIGHTBOX — VISUALIZAÇÃO AMPLIADA DE PROJETO
+  ======================================================== -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Imagem ampliada do projeto" aria-hidden="true">
+    <button class="lightbox__close" aria-label="Fechar">&times;</button>
+    <button class="lightbox__nav lightbox__nav--prev" aria-label="Projeto anterior">&#10094;</button>
+    <div class="lightbox__stage">
+      <div class="lightbox__media" id="lightbox-media"></div>
+      <div class="lightbox__caption">
+        <span class="lightbox__category" id="lightbox-category"></span>
+        <h3 class="lightbox__title" id="lightbox-title"></h3>
+        <p class="lightbox__desc" id="lightbox-desc"></p>
+      </div>
+    </div>
+    <button class="lightbox__nav lightbox__nav--next" aria-label="Próximo projeto">&#10095;</button>
+  </div>
+
+  <!-- ========================================================
+       BOTÃO FLUTUANTE — WHATSAPP
+  ======================================================== -->
+  <a href="https://wa.me/351934644974?text=Ol%C3%A1%2C%20gostaria%20de%20pedir%20um%20or%C3%A7amento."
+     class="whatsapp-float"
+     target="_blank"
+     rel="noopener noreferrer"
+     aria-label="Falar connosco no WhatsApp">
+    <svg viewBox="0 0 448 512" fill="currentColor" aria-hidden="true"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3s19.9 53.7 22.6 57.4c2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
+  </a>
+  <script src="assets/js/cookie-consent.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

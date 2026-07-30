@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="heroGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#0D0D0D"/>
+      <stop offset="60%"  stop-color="#1a1a2e"/>
+      <stop offset="100%" stop-color="#16213e"/>
+    </linearGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#heroGrad)"/>
+  <!-- Elemento decorativo magenta -->
+  <circle cx="1600" cy="200" r="500" fill="#E5007D" opacity="0.07"/>
+  <!-- Linhas decorativas -->
+  <line x1="0" y1="540" x2="1920" y2="540" stroke="#E5007D" stroke-width="1" opacity="0.1"/>
+  <!-- Texto placeholder -->
+  <text x="960" y="560" font-family="Arial, sans-serif" font-size="28" fill="rgba(255,255,255,0.3)"
+        text-anchor="middle" font-weight="bold" letter-spacing="8">
+    SUBSTITUIR POR IMAGEM REAL — assets/img/hero-bg.jpg
+  </text>
+  <text x="960" y="600" font-family="Arial, sans-serif" font-size="18" fill="rgba(255,255,255,0.2)"
+        text-anchor="middle">
+    Dimensões recomendadas: 1920 × 1080 px
+  </text>
+</svg>
